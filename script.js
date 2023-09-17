@@ -69,7 +69,7 @@ const btnHoldEvent = () => {
    totalScores[activePlayer] += current
    document.getElementById(`score--${activePlayer}`).textContent = totalScores[activePlayer]
 
-   if (totalScores[activePlayer] >= 10) {
+   if (totalScores[activePlayer] >= 100) {
       document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
       document.querySelector(`.player--${activePlayer}`).classList.remove('player--active')
       addHidden(diceElem)
@@ -83,6 +83,10 @@ const btnHoldEvent = () => {
 
 btnRoll.addEventListener('click', btnRollEvent)
 btnHold.addEventListener('click', btnHoldEvent)
+
+btnNew.addEventListener('click', () => {
+   location.reload()
+})
 
 
 
